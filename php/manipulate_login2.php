@@ -26,14 +26,19 @@
     if($email != "" and $password !="")
     {
 
-        $sql="UPDATE logged_user SET name = '$name', phone = '$phone', email='$email', password='$password', nid='$nid', dob='$dob', address='$address', post_code='$post_code'
-        where id=1";
+        session_start();
+        $_SESSION["name"] = "$name";
+        $_SESSION["phone"] = "$phone";
+        $_SESSION["email"] = "$email";
+        $_SESSION["password"] = "$password";
+        $_SESSION["nid"] = "$nid";
+        $_SESSION["dob"] = "$dob";
+        $_SESSION["address"] = "$address";
+        $_SESSION["post_code"] = "$post_code";
 
-        $conn->exec($sql);
-
-        
         header("Location: payment.php");
         exit();
+
         
     }
 

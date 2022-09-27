@@ -9,6 +9,7 @@
 <body>
     
 <?php 
+    session_start();
 
     include "connection.php";
 
@@ -30,16 +31,6 @@
         
     }
 
-    $sql1 = " SELECT * FROM logged_user ";
-    $stmt = $conn->prepare($sql1);
-    $stmt->execute();
-
-
-    foreach($result=$stmt->fetchall() as $key=>$val){
-        $name=$val['name'];    
-        $phone = $val['phone'];
-        $nid = $val['nid'];
-    }
 
 
     echo ' 
@@ -109,12 +100,13 @@
                 </div>
 
                 <div  class="columns">
+                
                 <div>
-                    <h3>User </br>'.$name.'</br></h3>
+                    <h3>User </br>'.$_SESSION["name"].'</br></h3>
                 </div>
 
                 <div>
-                    <h3>Phone </br>'.$phone.'</br></h3>
+                    <h3>Phone </br>'.$_SESSION["phone"].'</br></h3>
                 </div>                   
 
                 <div>
