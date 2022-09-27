@@ -9,7 +9,7 @@
 <body>
 
     <?php
-
+ 
         include "connection.php";
 
   
@@ -40,18 +40,26 @@
             $boarding=$boarding_h.":".$boarding_m.":00";
             
             
-  		} 
+  		}
 
-            include "connection.php";
-            $sql="UPDATE ticket SET plane_name = '$plane_name', source = '$source', destination='$destination', choose_class='$choose_class', journey_date='$journey_date', departure='$departure', arrival='$arrival', boarding='$boarding', ticket_price='$ticket_price'
-            where plane_id=1";
+        session_start();  
+        $_SESSION["source"]="$source";
+        $_SESSION["destination"]="$destination";
+        $_SESSION["choose_class"]="$choose_class";
+        $_SESSION["journey_date"]="$journey_date";
 
-            $conn->exec($sql);
+        $_SESSION["plane_name"]="$plane_name";
+        $_SESSION["departure"]="$departure";
+        $_SESSION["arrival"]="$arrival";
+        $_SESSION["ticket_price"]="$ticket_price";
+        $_SESSION["boarding"]="$boarding";
 
-            if($departure ==''){ 
-                echo '<script>alert("Incorrect Email/Password")</script>';
-                header("Location: index.php?error=Flight Unavailable");
-                exit();
+
+            if($ticket_price ==''){ 
+                echo '<script>alert("No flight matched for this route.\n Try again");
+                window.location.href = "../index.php";
+                </script>';
+                
             }
             else{
 

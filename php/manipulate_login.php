@@ -30,24 +30,26 @@
         $_SESSION["name"] = "$name";
         $_SESSION["phone"] = "$phone";
         $_SESSION["email"] = "$email";
-        $_SESSION["password"] = "$password";
+        $_SESSION["password"] = "$password"; 
         $_SESSION["nid"] = "$nid";
         $_SESSION["dob"] = "$dob";
         $_SESSION["address"] = "$address";
         $_SESSION["post_code"] = "$post_code";
 
-        header("Location: payment.php");
-        exit();
+        echo '<script>
+        alert("Login Successful\nGo to Payment to purchase your ticket. ");
+        window.location.href = "payment.php";
+        </script>';
 
-        
+ 
+         
     }
 
     else{
-        echo "<script>alert('Incorrect Email/Password')</script>";
-        //echo "<script>window.open('user_login.php','_self')</script>";
-                
-        header("Location: user_login.php?error=Incorect Username or Password");
-        exit();
+        echo '<script>
+        alert("Incorrect Email/Password\nTry again");
+        window.location.href = "user_login.php";
+        </script>';
 
     }
  

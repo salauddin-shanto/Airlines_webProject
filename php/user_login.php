@@ -10,14 +10,14 @@
 </head>
  
 <body>  
- 
+  
 <section id="page_margin">
   
     <div class="header">
         Login<br>
     </div>
 
-    <form action="manipulate_login2.php" method="post">
+    <form action="manipulate_login.php" method="post"> 
  
         <div>
             <img src="../image/login1.png" class="login_png">

@@ -11,28 +11,6 @@
 <?php 
     session_start();
 
-    include "connection.php";
-
-    $sql = " SELECT * FROM ticket ";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-
-
-    foreach($result=$stmt->fetchall() as $key=>$val){
-        $plane_name=$val['plane_name'];    
-        $source = $val['source'];
-        $destination = $val['destination'];
-        $choose_class = $val['choose_class'];
-        $journey_date = $val['journey_date'];
-        $departure=$val['departure'];
-        $arrival=$val['arrival'];
-        $boarding=$val['boarding'];
-        $ticket_price=$val['ticket_price'];
-        
-    }
-
-
-
     echo ' 
     <section id="ticket_margin">
         <section id="header_section">
@@ -56,13 +34,13 @@
                 <div class="columns">
 
                     <div>
-                        <h3>Flight </br>'.$plane_name.'</br></h3>
+                        <h3>Flight </br>'.$_SESSION["plane_name"].'</br></h3>
                     </div>
                     <div>
-                        <h3>Frome </br>'.$source.'</br></h3>
+                        <h3>Frome </br>'.$_SESSION["source"].'</br></h3>
                     </div>
                     <div>
-                        <h3>To </br> '.$destination.'</br></h3>
+                        <h3>To </br> '.$_SESSION["destination"].'</br></h3>
                     </div>
                                                
                 </div>
@@ -70,31 +48,31 @@
 
                 <div class="columns">
                     <div>
-                        <h3>Date </br>'.$journey_date.'</br></h3>
+                        <h3>Date </br>'.$_SESSION["journey_date"].'</br></h3>
                     </div>
 
                     <div>
-                        <h3>Class </br>'.$choose_class.'</br></h3>
+                        <h3>Class </br>'.$_SESSION["choose_class"].'</br></h3>
                     </div>
 
                     <div>
-                        <h3>Ticket Fare </br>'.$ticket_price.'</br></h3>
+                        <h3>Ticket Fare </br>'.$_SESSION["ticket_price"].'</br></h3>
                     </div>
                 </div>
 
 
                 <div  class="columns">
                     <div>
-                        <h3>Departure </br>'.$departure.'</br></h3>
+                        <h3>Departure </br>'.$_SESSION["departure"].'</br></h3>
                     </div>
 
                     <div>
-                        <h3>Arrival </br>'.$arrival.'</br></h3>
+                        <h3>Arrival </br>'.$_SESSION["arrival"].'</br></h3>
                     </div>
                         
 
                     <div>
-                        <h3>Boarding </br>'.$boarding.'</br></h3>
+                        <h3>Boarding </br>'.$_SESSION["boarding"].'</br></h3>
                     </div>
                                      
                 </div>
@@ -125,7 +103,7 @@
     </section>
     
     ';
- 
+  
 
 
 ?>

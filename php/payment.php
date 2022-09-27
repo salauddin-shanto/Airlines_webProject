@@ -12,12 +12,12 @@
 <body>   
 
 <section id="page_margin">
- 
+  
     <div class="header">
         Online Payment<br>
     </div>
 
-    <form action="ticket2.php" method="post">
+    <form action="ticket.php" method="post">
 
         <div class="container">
             <label for="uname" class="lebel"><b>Bikash Number</b></label><br>
