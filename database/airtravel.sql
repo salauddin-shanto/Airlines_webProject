@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2022 at 12:54 PM
+-- Generation Time: Sep 27, 2022 at 04:52 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -44,7 +44,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `name`, `phone`, `email`, `password`, `nid`, `dob`, `address`, `post_code`) VALUES
-(1, 'Shanto', '01840071027', 'salauddin916854@gmail.com', '12', 2147483647, '2022-08-23', 'Narayanganj', '1460');
+(1, 'Shanto', '01234567890', 'salauddin916854@gmail.com', '12', 2147483647, '2022-08-23', 'Dhaka', '2345');
 
 -- --------------------------------------------------------
 
@@ -79,31 +79,6 @@ INSERT INTO `fare` (`plane_id`, `class_name`, `ticket_price`, `available_seats`)
 (867, 'Economic', 250, 0),
 (868, 'Business', 850, 300),
 (869, 'Economic', 800, 250);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `logged_user`
---
-
-CREATE TABLE `logged_user` (
-  `id` int(11) NOT NULL,
-  `name` varchar(250) DEFAULT NULL,
-  `phone` varchar(250) DEFAULT NULL,
-  `email` varchar(250) DEFAULT NULL,
-  `password` varchar(250) DEFAULT NULL,
-  `nid` int(11) DEFAULT NULL,
-  `dob` date DEFAULT NULL,
-  `address` varchar(250) DEFAULT NULL,
-  `post_code` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `logged_user`
---
-
-INSERT INTO `logged_user` (`id`, `name`, `phone`, `email`, `password`, `nid`, `dob`, `address`, `post_code`) VALUES
-(1, 'Samiul', '01740071367', 'samiul68@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-23', 'Natore', '1460');
 
 -- --------------------------------------------------------
 
@@ -163,32 +138,6 @@ INSERT INTO `route` (`route_id`, `plane_id`, `source`, `destination`, `departure
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ticket`
---
-
-CREATE TABLE `ticket` (
-  `plane_id` int(11) NOT NULL,
-  `plane_name` varchar(250) DEFAULT NULL,
-  `source` varchar(250) DEFAULT NULL,
-  `destination` varchar(250) DEFAULT NULL,
-  `choose_class` varchar(250) DEFAULT NULL,
-  `journey_date` date DEFAULT NULL,
-  `departure` time DEFAULT NULL,
-  `arrival` time DEFAULT NULL,
-  `boarding` time DEFAULT NULL,
-  `ticket_price` int(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `ticket`
---
-
-INSERT INTO `ticket` (`plane_id`, `plane_name`, `source`, `destination`, `choose_class`, `journey_date`, `departure`, `arrival`, `boarding`, `ticket_price`) VALUES
-(1, 'Air Bangla', 'Dhaka', 'Rajshahi', 'Economic', '2022-09-07', '14:00:00', '15:30:00', '13:40:00', 500);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -209,13 +158,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `phone`, `email`, `password`, `nid`, `dob`, `address`, `post_code`) VALUES
-(2, 'Ishraq', '017400713856', 'ishraq@ymail.com', 'd41d8cd98f00b204e9800998ecf8427e', 2147483647, '2022-08-24', 'bhulta,gausia,narayanganj', '1460'),
+(2, 'Ishraq', '01740071343856', 'ishraq@ymail.com', 'd41d8cd98f00b204e9800998ecf8427e', 2147483647, '2022-08-24', 'bhulta,gausia,narayanganj', '1460'),
 (32, 'Nazmul', '017400713856', 'nazmul@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-10', 'Pabna', '2360'),
-(33, 'Shanto', '01840071027', 'salauddin916854@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-09', 'Narayanganj', '1460'),
-(34, 'Shanto', '01840071027', 'salauddin916854@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-09', 'Narayanganj', '1460'),
+(33, 'Shanto', '012345678888', 'salauddin916854@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-09', 'Narayanganj', '1460'),
+(34, 'Shanto', '01234567890', 'salauddin916854@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-09', 'Narayanganj', '1460'),
 (35, 'Samiul', '01740071367', 'samiul68@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-08-23', 'Natore', '1460'),
-(36, 'Salauddin', '01840071027', 'salauddin916854@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 2147483647, '2022-06-25', 'Dhaka', '1460'),
-(37, 'St Salauddin hi', '01840071027', 'asrafrayeen131@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-09-06', 'Rajshahi\r\nTalaimari', '1460');
+(36, 'Salauddin', '018434544234', 'salauddin916854@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 2147483647, '2022-06-25', 'Dhaka', '1460'),
+(37, 'St ', '01234567890', 'asrafrayeen131@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710', 2147483647, '2022-09-06', 'Rajshahi,Talaimari', '1460');
 
 --
 -- Indexes for dumped tables
@@ -225,12 +174,6 @@ INSERT INTO `users` (`id`, `name`, `phone`, `email`, `password`, `nid`, `dob`, `
 -- Indexes for table `admin`
 --
 ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `logged_user`
---
-ALTER TABLE `logged_user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -244,12 +187,6 @@ ALTER TABLE `plane`
 --
 ALTER TABLE `route`
   ADD PRIMARY KEY (`route_id`);
-
---
--- Indexes for table `ticket`
---
-ALTER TABLE `ticket`
-  ADD PRIMARY KEY (`plane_id`);
 
 --
 -- Indexes for table `users`
