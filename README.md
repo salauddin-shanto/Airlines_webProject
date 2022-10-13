@@ -13,15 +13,16 @@
 
 3.Move this folder “Airlines”) to C:\xampp\htdocs 
 
-  a.first navigate to your C drive
-  
-  b.then xampp folder
-  
-  c.then htdocs
+        3.1 first navigate to your C drive
+
+        3.2 then xampp folder
+
+        3.3 then htdocs
   
 4.Move the “Airlines” folder here 
 
 5.Go to http://localhost/phpmyadmin/ from your browser
+
 6.Create a database named “airtravel” (database name must be same as me)
 
 7.Select the database and click import 
