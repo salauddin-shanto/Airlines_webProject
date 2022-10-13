@@ -1,34 +1,33 @@
 # Airlines_webProject
-This is an Airlines ticket booking web Project developed using PHP and MySQL. 
+#This is an Airlines ticket booking web Project developed using PHP and MySQL. 
 
-User manual for Airlines ticket booking web Project 
+#User manual for Airlines ticket booking web Project 
 
-Prerequisites:Xampp must be installed on your pc
+#(Prerequisites:Xampp must be installed on your pc)
 
-Steps to run this project :
+#Steps to run this project :
 
-First Download this project
-Create a folder named “Airlines” (You can give any name to this folder)
-Move this folder “Airlines”) to C:\xampp\htdocs 
-  first navigate to your C drive
-  then xampp folder
-  then htdocs
-Move the “Airlines” folder here 
+1.First Download this project
+2.Create a folder named “Airlines” (You can give any name to this folder)
+3.Move this folder “Airlines”) to C:\xampp\htdocs 
+  a.first navigate to your C drive
+  b.then xampp folder
+  c.then htdocs
+4.Move the “Airlines” folder here 
 
-Go to http://localhost/phpmyadmin/ from your browser
-Create a database named “airtravel” (database name must be same as me)
+5.Go to http://localhost/phpmyadmin/ from your browser
+6.Create a database named “airtravel” (database name must be same as me)
 
-Select the database and click import 
+7.Select the database and click import 
 
-Click “Choose File” and navigate to C:\xampp\htdocs\airlines\database
-Select the SQL file named airtravel
+8.Click “Choose File” and navigate to C:\xampp\htdocs\airlines\database and Select the SQL file named airtravel
 
-Click open and the Click import
+9.Click open and the Click import
 
 
-That’s all.Database of this project is added.
+10.That’s all.Database of this project is added.
 
-You can now run this project  using the url "http://localhost/airlines/index.php"
+11.You can now run this project  using the url "http://localhost/airlines/index.php"
 
-You can modify codes to make the project better.
-Thank you….
+#You can modify codes to make the project better.
+#Thank you….
