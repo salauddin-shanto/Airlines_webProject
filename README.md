@@ -10,10 +10,15 @@
 1.First Download this project
 
 2.Create a folder named “Airlines” (You can give any name to this folder)
+
 3.Move this folder “Airlines”) to C:\xampp\htdocs 
+
   a.first navigate to your C drive
+  
   b.then xampp folder
+  
   c.then htdocs
+  
 4.Move the “Airlines” folder here 
 
 5.Go to http://localhost/phpmyadmin/ from your browser
