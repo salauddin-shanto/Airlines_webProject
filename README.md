@@ -8,6 +8,7 @@
 #Steps to run this project :
 
 1.First Download this project
+
 2.Create a folder named “Airlines” (You can give any name to this folder)
 3.Move this folder “Airlines”) to C:\xampp\htdocs 
   a.first navigate to your C drive
