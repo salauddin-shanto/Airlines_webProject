@@ -9,9 +9,8 @@
 
 1.First Download this project
 
-2.Create a folder named “Airlines” (You can give any name to this folder)
-
-3.Move this folder “Airlines”) to C:\xampp\htdocs 
+2.Create a folder named “Airlines” and move all the downloaded files into this folder.
+3.Go to C:\xampp\htdocs 
 
         3.1 first navigate to your C drive
 
